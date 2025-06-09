@@ -26,10 +26,10 @@
   "license": "(MIT OR Apache-2.0)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seu-usuario/rust-component.git"
+    "url": "git+https://github.com/patrickpeyneau/rust-component.git"
   },
   "bugs": {
-    "url": "https://github.com/seu-usuario/rust-component/issues"
+    "url": "https://github.com/patrickpeyneau/rust-component/issues"
   },
   "homepage": "https://www.patrickpeyneau.com",
   "files": [
