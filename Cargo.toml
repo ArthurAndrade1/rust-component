@@ -1,0 +1,38 @@
+[package]
+name = "rust-component"
+version = "0.1.0"
+edition = "2021"
+authors = ["Seu Nome <voce@exemplo.com>"] # IMPORTANTE: Atualize com seus dados!
+description = "Um componente Rust compilado para WebAssembly para uso com TypeScript/JavaScript."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/seu-usuario/rust-component" # IMPORTANTE: Atualize com o URL do seu repositório!
+readme = "README.md"
+
+[lib]
+crate-type = ["cdylib", "rlib"] # cdylib para WebAssembly, rlib para testes unitários em Rust
+
+[features]
+default = ["console_error_panic_hook"]
+# Opcional: wee_alloc é um alocador menor, útil para reduzir o tamanho do Wasm.
+# wee_alloc = ["wee_alloc/default"] 
+
+[dependencies]
+wasm-bindgen = "0.2.92" # Verifique a versão mais recente
+
+# Opcional: Para mensagens de erro de pânico mais detalhadas no console do navegador/Node.
+console_error_panic_hook = { version = "0.1.7", optional = true }
+
+# Opcional: Alocador wee_alloc para Wasm menor.
+# wee_alloc = { version = "0.4.5", optional = true }
+
+[dev-dependencies]
+# Para testes em Rust que interagem com Wasm.
+wasm-bindgen-test = "0.3.42"
+
+[profile.release]
+# Otimizações para tamanho do binário em builds de release.
+opt-level = "s"  # Otimizar para tamanho (size). 'z' é ainda menor, mas pode ser mais lento.
+lto = true
+codegen-units = 1 # Pode melhorar otimizações e tamanho, mas aumenta tempo de compilação.
+panic = "abort"   # Abortar em pânico para reduzir o tamanho do binário (remove código de unwinding).
+# strip = true # Remove símbolos do binário (requer nightly ou ferramenta externa).

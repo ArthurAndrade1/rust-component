@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Target moderno para Node.js
+    "module": "CommonJS", // Módulo padrão para Node.js
+    "moduleResolution": "node", // Como o TS resolve módulos
+    "esModuleInterop": true, // Permite interoperabilidade com módulos CommonJS
+    "allowSyntheticDefaultImports": true, // Necessário para alguns módulos
+    "strict": true, // Habilita todas as checagens estritas de tipo
+    "skipLibCheck": true, // Pula a checagem de tipos de arquivos de declaração (.d.ts)
+    "forceConsistentCasingInFileNames": true, // Garante consistência no case dos nomes de arquivos
+    "outDir": "./dist", // Diretório de saída para JavaScript compilado (se você compilar)
+    "rootDir": ".", // Diretório raiz dos seus arquivos fonte TypeScript
+    "baseUrl": ".", // Base para resolução de caminhos não relativos
+    "paths": {
+      // Mapeamento de caminhos, se necessário (ex: "pkg/*": ["./pkg/*"])
+    },
+    "resolveJsonModule": true, // Permite importar arquivos .json
+    "sourceMap": true, // Gera source maps para debugging
+    "declaration": true, // Gera arquivos .d.ts para seu código TS (não para o Wasm)
+    "declarationMap": true, // Gera source maps para os arquivos .d.ts
+    "noEmitOnError": true, // Não emite output se houver erros
+    "isolatedModules": true // Garante que cada arquivo pode ser transpilado separadamente
+  },
+  "include": [
+    "example.ts", // Inclui o arquivo de exemplo
+    "src/**/*.ts", // Inclui quaisquer outros arquivos TS na pasta src (se houver)
+    "pkg/rust_component.d.ts" // Importante: Inclui as definições de tipo geradas pelo wasm-pack
+  ],
+  "exclude": [
+    "node_modules", // Exclui a pasta node_modules
+    "dist", // Exclui a pasta de output
+    "pkg-web" // Exclui a pasta de build para web, a menos que esteja trabalhando nela
+  ]
+}

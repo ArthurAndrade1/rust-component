@@ -1,0 +1,35 @@
+# Arquivo para controlar quais arquivos o NPM ignora ao empacotar.
+# Se este arquivo existir, o .gitignore é ignorado pelo NPM para fins de empacotamento.
+
+# Ignorar arquivos e pastas de controle de versão e IDEs
+.git/
+.vscode/
+.idea/
+
+# Ignorar dependências de desenvolvimento e saídas de build do Rust não destinadas ao pacote
+node_modules/
+target/
+
+# Ignorar código fonte que não faz parte do pacote distribuível diretamente
+src/
+example.ts
+tsconfig.json
+Cargo.toml
+Cargo.lock
+
+# Ignorar arquivos de log, temporários e de sistema operacional
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# A pasta 'pkg/' e 'README.md' são controladas pelo campo 'files' no package.json
+# e NÃO devem ser listadas aqui para serem ignoradas.
+# Qualquer coisa não listada aqui (e não ignorada por padrões acima) E
+# que corresponda ao campo 'files' no package.json será incluída.
+
+# Ignorar outras pastas de build se não forem parte do pacote NPM principal
+# (ex: se você tiver um build 'pkg-web/' separado que não vai para este pacote)
+# pkg-web/
