@@ -1,11 +1,11 @@
 [package]
 name = "rust-component"
-version = "0.1.0"
+version = "0.1.6"
 edition = "2021"
-authors = ["Seu Nome <voce@exemplo.com>"] # IMPORTANTE: Atualize com seus dados!
+authors = ["Patrick Peyneau Andrade"]
 description = "Um componente Rust compilado para WebAssembly para uso com TypeScript/JavaScript."
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/seu-usuario/rust-component" # IMPORTANTE: Atualize com o URL do seu repositório!
+repository = "https://github.com/patrickpeyneau/rust-component"
 readme = "README.md"
 
 [lib]
