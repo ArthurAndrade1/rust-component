@@ -1,6 +1,6 @@
 {
   "name": "@patrickpeyneau/rust-component",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Um componente Rust compilado para WebAssembly para uso com TypeScript/JavaScript.",
   "main": "pkg/rust_component.js",
   "types": "pkg/rust_component.d.ts",
