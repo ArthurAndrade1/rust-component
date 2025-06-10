@@ -1,12 +1,12 @@
 {
-  "name": "rust-component",
-  "version": "0.1.6",
+  "name": "@patrickpeyneau/rust-component",
+  "version": "0.1.7",
   "description": "Um componente Rust compilado para WebAssembly para uso com TypeScript/JavaScript.",
   "main": "pkg/rust_component.js",
   "types": "pkg/rust_component.d.ts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  },
+  }, 
   "scripts": {
     "build": "npx wasm-pack build --target nodejs --out-dir pkg",
     "build:release": "npx wasm-pack build --target nodejs --out-dir pkg --release",

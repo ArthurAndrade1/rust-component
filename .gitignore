@@ -15,6 +15,9 @@ lerna-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+*.tgz
+
 /.npmrc
+.env
 # Manter intencionalmente os arquivos da pasta pkg para o npm
 # Certifique-se que o campo "files" no package.json está correto
