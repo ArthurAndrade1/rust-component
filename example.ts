@@ -31,7 +31,7 @@ async function runExample () {
     console.error("Pânico capturado no lado do TypeScript:", e);
     console.log("Se você vir um stack trace do Rust acima (graças ao console_error_panic_hook), está funcionando!");
   }
-
+  // teste commit
   console.log("\nExemplo concluído.");
 }
 
